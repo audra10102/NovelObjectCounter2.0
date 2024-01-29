@@ -43,9 +43,10 @@
     }
 
     #buttonsContainer {
-      margin-top: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       display: flex;
-      gap: 10px;
+      gap: 15px;
     }
 
     #nextMouseBtn,
@@ -59,11 +60,13 @@
     table {
       border-collapse: collapse;
       width: 80%;
-      margin-top: 20px;
+      margin-top: 40px;
       margin-bottom: 40px;
       text-align: center;
       justify-content: center;
       align-items: center;
+      margin: 0 auto; /* Center-align the table horizontally */
+
     }
 
     th, td {
