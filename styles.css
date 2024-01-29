@@ -1,5 +1,6 @@
 
     body {
+      background-color: hsl(233, 24%, 93%);
       font-family: Arial, sans-serif;
       text-align: center;
       display: flex;
@@ -7,10 +8,30 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    #navbar {
+      background-color: #b8e0f4;
+      overflow-x: hidden;
+      padding: 10px;
+      width: 100%;
+      margin: 0;
+      display:inline;
+    }
+
+    h2 {
+      margin-bottom: 5px; /* Adjust the margin as needed */
+    }
+  
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px; /* Adjust the margin as needed */
     }
 
     #container {
       overflow-y: auto;
+      overflow-x: hidden;
       max-height: 80vh; /* Adjust the maximum height as needed */
       text-align: center;
       justify-content: center;
@@ -28,7 +49,7 @@
       display: flex;
       justify-content: space-between;
       width: 80%;
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .timer-column {
@@ -59,7 +80,7 @@
 
     table {
       border-collapse: collapse;
-      width: 80%;
+      width: 95%;
       margin-top: 40px;
       margin-bottom: 40px;
       text-align: center;
