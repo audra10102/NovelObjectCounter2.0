@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novel Object Recognition Scoring</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>NOR Scoring Tool</h1>
+
+    <div class="timer-container">
+      <div class="timer-column">
+        <div id="leftObjectTime" class="timer">
+          <b>Left Timer:</b>
+          <span id="leftTimer" class="running">0.000</span> seconds
+        </div>
+        <div id="totalLeftObjectTime" class="timer">
+          <b>Total Left Object Exploration Time:</b> 0.000 seconds
+        </div>
+        <div id="leftObjectEncounters" class="timer">
+          <b>Left Object Encounters:</b> 0
+        </div>
+      </div>
+
+      <div class="timer-column">
+        <div id="rightObjectTime" class="timer">
+          <b>Right Timer:</b>
+          <span id="rightTimer" class="running">0.000</span> seconds
+        </div>
+        <div id="totalRightObjectTime" class="timer">
+          <b>Total Right Object Exploration Time:</b> 0.000 seconds
+        </div>
+        <div id="rightObjectEncounters" class="timer">
+          <b>Right Object Encounters:</b> 0
+        </div>
+      </div>
+    </div>
+
+    <div id="buttonsContainer">
+      <button id="nextMouseBtn" onclick="nextMouse()">Next Mouse</button>
+      <button id="downloadDataBtn" onclick="downloadData()">
+        Download Data
+      </button>
+      <button id="copyTableBtn" onclick="copyTable()">Copy Table</button>
+    </div>
+
+    <div id="container">
+        <table id="dataTable">
+            <tr>
+                <th class="editable" onclick="startEditing(this)"><b>Mouse</b></th>
+                <th>Total Left Object Exploration Time</th>
+                <th>Left Object Encounters</th>
+                <th>Total Right Object Exploration Time</th>
+                <th>Right Object Encounters</th>
+                <th>Total Object Exploration Time</th>
+                </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

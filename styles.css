@@ -1,0 +1,92 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    #container {
+      overflow-y: auto;
+      max-height: 80vh; /* Adjust the maximum height as needed */
+      width: 80%;
+    }
+
+    #labLogo {
+      max-width: 16%; /* Adjust the percentage to control the size */
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .timer-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    .timer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 48%;
+    }
+
+    .timer {
+      margin-bottom: 10px;
+    }
+
+    #buttonsContainer {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    #nextMouseBtn,
+    #downloadDataBtn,
+    #copyTableBtn {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .running {
+      color: red;
+    }
+
+    .editable {
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .editable:hover {
+      background-color: #f4f4f4;
+    }
+
+    .editable input {
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+  
