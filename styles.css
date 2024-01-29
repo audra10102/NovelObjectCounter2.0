@@ -29,11 +29,11 @@
     #instructions {
       margin-top: 60px; /* Adjust the margin to provide space for the timers and navbar */
       padding: 10px;
-      position: absolute;
-      top: 500px; /* Fixed distance from the top */
+      position: relative;
       width: 100%;
       background-color: #b8e0f4; /* Match the navbar background color */
       box-sizing: border-box;
+      top: 50; /* Fixed position from the top */
       z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
     }
 
