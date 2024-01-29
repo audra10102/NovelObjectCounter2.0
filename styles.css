@@ -1,133 +1,131 @@
+body {
+  background-color: hsl(233, 24%, 93%);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-top: 50px;
+}
 
-    body {
-      background-color: hsl(233, 24%, 93%);
-      font-family: Arial, sans-serif;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      overflow-x: hidden;
-      margin-top: 50px;
-    }
+#navbar {
+  background-color: #b8e0f4;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 10px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  box-sizing: border-box;
+}
 
-    #navbar {
-      background-color: #b8e0f4;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      padding: 10px;
-      width: 100%;
-      margin: 0;
-      display: inline;
-      top: 0;
-      position: fixed;
-      z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
-      box-sizing: border-box;
-    }
+#instructions {
+  margin-top: 80px;
+  padding: 10px;
+  position: sticky;
+  width: 100%;
+  background-color: #b8e0f4;
+  box-sizing: border-box;
+  top: 50px;
+  z-index: 1000;
+}
 
-    #instructions {
-      margin-top: 60px; /* Adjust the margin to provide space for the timers and navbar */
-      padding: 10px;
-      position: relative;
-      width: 100%;
-      background-color: #b8e0f4; /* Match the navbar background color */
-      box-sizing: border-box;
-      top: 50; /* Fixed position from the top */
-      z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
-    }
+#container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 80%;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
-    #container {
-      overflow-y: auto;
-      overflow-x: hidden;
-      width: 80%;
-      padding-bottom: 50px; /* Extra padding to make space for the results table */
-      position: relative;
-      margin-top: 20px; /* Adjust the margin to provide space for the timers */
-      margin-bottom: 20px; /* Adjust the margin for the bottom padding */
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-    }
+#labLogo {
+  max-width: 16%;
+  height: auto;
+  margin-top: 20px;
+}
 
-    #labLogo {
-      max-width: 16%; /* Adjust the percentage to control the size */
-      height: auto;
-      margin-top: 20px;
-    }
+.timer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 10%; /* Center the timer containers */
+}
 
-    .timer-container {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      margin-top: 40px;
-    }
+.timer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
 
-    .timer-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 48%;
-    }
+.timer {
+  margin-bottom: 10px;
+}
 
-    .timer {
-      margin-bottom: 10px;
-    }
+#buttonsContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
 
-    #buttonsContainer {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      display: flex;
-      gap: 15px;
-    }
+#nextMouseBtn,
+#downloadDataBtn,
+#copyTableBtn {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    #nextMouseBtn,
-    #downloadDataBtn,
-    #copyTableBtn {
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+table {
+  border-collapse: collapse;
+  width: 95%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-    table {
-      border-collapse: collapse;
-      width: 95%;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto; /* Center-align the table horizontally */
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 
-    }
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
 
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+.running {
+  color: red;
+}
 
-    th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-    }
+.editable {
+  cursor: pointer;
+  padding: 4px;
+}
 
-    .running {
-      color: red;
-    }
+.editable:hover {
+  background-color: #f4f4f4;
+}
 
-    .editable {
-      cursor: pointer;
-      padding: 4px;
-    }
+.editable input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
 
-    .editable:hover {
-      background-color: #f4f4f4;
-    }
 
-    .editable input {
-      border: none;
-      outline: none;
-      width: 100%;
-    }
+
+
   
