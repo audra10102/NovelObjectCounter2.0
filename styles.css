@@ -9,34 +9,45 @@
       height: 100vh;
       flex-direction: column;
       overflow-x: hidden;
+      margin-top: 50px;
     }
 
     #navbar {
       background-color: #b8e0f4;
       overflow-x: hidden;
+      overflow-y: hidden;
       padding: 10px;
       width: 100%;
       margin: 0;
-      display:inline;
+      display: inline;
+      top: 0;
+      position: fixed;
+      z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+      box-sizing: border-box;
     }
 
-    h2 {
-      margin-bottom: 5px; /* Adjust the margin as needed */
-    }
-  
-    p {
-      margin-top: 5px;
-      margin-bottom: 5px; /* Adjust the margin as needed */
+    #instructions {
+      margin-top: 60px; /* Adjust the margin to provide space for the timers and navbar */
+      padding: 10px;
+      position: absolute;
+      top: 500px; /* Fixed distance from the top */
+      width: 100%;
+      background-color: #b8e0f4; /* Match the navbar background color */
+      box-sizing: border-box;
+      z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
     }
 
     #container {
       overflow-y: auto;
       overflow-x: hidden;
-      max-height: 80vh; /* Adjust the maximum height as needed */
+      width: 80%;
+      padding-bottom: 50px; /* Extra padding to make space for the results table */
+      position: relative;
+      margin-top: 20px; /* Adjust the margin to provide space for the timers */
+      margin-bottom: 20px; /* Adjust the margin for the bottom padding */
       text-align: center;
       justify-content: center;
       align-items: center;
-      width: 80%;
     }
 
     #labLogo {
