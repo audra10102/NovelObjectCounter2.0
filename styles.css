@@ -39,7 +39,7 @@ body {
   width: 80%;
   padding-bottom: 50px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   align-items: center;
 }
@@ -101,7 +101,7 @@ table {
 
 th, td {
   border: 1px solid #dddddd;
-  text-align: center;
+  text-align: left;
   font-family: 'calibri';
   font-size: 9;
   padding: 8px;
@@ -110,6 +110,7 @@ th, td {
 th {
   background-color: #f2f2f2;
   font-weight: bold;
+  text-align: center;
   padding: 8px;
 }
 
