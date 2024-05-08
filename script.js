@@ -79,6 +79,41 @@ function updateRightObjectEncounters() {
   document.getElementById('rightObjectEncounters').innerHTML = `<b>Right Object Encounters:</b> ${rightObjectEncounters}`;
 }
 
+function copyRow(row) {
+  const cells = row.cells;
+  let rowData = "";
+  for (let i = 1; i < cells.length - 1; i++) { // Skip first and last column
+    rowData += cells[i].innerText + "\t"; // Tab separated values
+  }
+  navigator.clipboard.writeText(rowData);
+}
+
+  // Get the cell containing the "Copy" button
+  const copyButtonCell = row.cells[row.cells.length - 1];
+
+  // Create pop-up message
+  const popup = document.createElement('div');
+  popup.innerHTML = 'Copied';
+  popup.classList.add('popup');
+
+  // Get the position of the "Copy" button
+  const buttonRect = row.cells[row.cells.length - 1].getBoundingClientRect();
+
+  // Set position of the pop-up message relative to the button
+  popup.style.position = 'fixed';
+  popup.style.top = `${buttonRect.top - 40}px`; // Adjust as needed
+  popup.style.left = `${buttonRect.right}px`; // Adjust as needed
+
+  document.body.appendChild(popup);
+
+ // Remove pop-up message after 2 seconds
+ setTimeout(() => {
+  popup.style.opacity = '0';
+  setTimeout(() => {
+    copyButtonCell.removeChild(popup); // Remove pop-up message from the cell
+  }, 1000);
+}, 2000);
+
 function nextMouse() {
   // Create a new row in the table
   const dataTable = document.getElementById('dataTable');
@@ -91,6 +126,7 @@ function nextMouse() {
   const cell4 = newRow.insertCell(3);
   const cell5 = newRow.insertCell(4);
   const cell6 = newRow.insertCell(5);
+  const cell7 = newRow.insertCell(6); // New cell for copy button
 
   const totalObjectExplorationTime = totalLeftObjectTime + totalRightObjectTime;
 
@@ -102,6 +138,7 @@ function nextMouse() {
   cell4.innerHTML = totalRightObjectTime.toFixed(3);
   cell5.innerHTML = rightObjectEncounters;
   cell6.innerHTML = totalObjectExplorationTime.toFixed(3);
+  cell7.innerHTML = '<button onclick="copyRow(this.parentElement.parentElement)">Copy</button>'; // Add copy button
 
   // Reset timers and counters
   totalLeftObjectTime = 0;
