@@ -86,7 +86,6 @@ function copyRow(row) {
     rowData += cells[i].innerText + "\t"; // Tab separated values
   }
   navigator.clipboard.writeText(rowData);
-}
 
   // Get the cell containing the "Copy" button
   const copyButtonCell = row.cells[row.cells.length - 1];
@@ -97,7 +96,7 @@ function copyRow(row) {
   popup.classList.add('popup');
 
   // Get the position of the "Copy" button
-  const buttonRect = row.cells[row.cells.length - 1].getBoundingClientRect();
+  const buttonRect = copyButtonCell.getBoundingClientRect();
 
   // Set position of the pop-up message relative to the button
   popup.style.position = 'fixed';
@@ -106,13 +105,14 @@ function copyRow(row) {
 
   document.body.appendChild(popup);
 
- // Remove pop-up message after 2 seconds
- setTimeout(() => {
-  popup.style.opacity = '0';
+  // Remove pop-up message after 2 seconds
   setTimeout(() => {
-    copyButtonCell.removeChild(popup); // Remove pop-up message from the cell
-  }, 1000);
-}, 2000);
+    popup.style.opacity = '0';
+    setTimeout(() => {
+      document.body.removeChild(popup); // Remove pop-up message from the body
+    }, 1000);
+  }, 2000);
+}
 
 function nextMouse() {
   // Create a new row in the table
@@ -209,3 +209,6 @@ function startEditing(cell) {
 function stopEditing(cell, input) {
   cell.textContent = input.value;
 }
+
+
+
